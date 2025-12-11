@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Taking Back Control - Linux Presentation</title>
+        
+        <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: "Segoe UI", Roboto, Arial, sans-serif;
+          background: #111;
+            color: #eee;
+            display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          overflow: hidden;
+        }
+      
+      .slide {
+        display: none;
+        max-width: 1200px;
+        width: 100%;
+        padding: 40px;
+        box-sizing: border-box;
+        animation: fade 0.4s ease;
+      }
+      
+      .slide.active {
+        display: block;
+      }
+      
+      @keyframes fade {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      
+      .content {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+      }
+      
+      .content img {
+        width: 45%;
+        max-height: 60vh;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      
+      .text {
+        width: 55%;
+        line-height: 1.6em;
+      }
+      
+      h1, h2, h3 {
+        margin-top: 0;
+        color: #58a6ff;
+      }
+      
+      ul {
+        padding-left: 20px;
+      }
+      
+      pre {
+        white-space: pre-wrap;
+        line-height: 1.6em;
+      }
+      
+      .nav {
+        position: fixed;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+      }
+      
+      button {
+        background: #222;
+          color: #eee;
+          border: 1px solid #555;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 0 10px;
+        border-radius: 6px;
+        transition: background 0.2s;
+      }
+      
+      button:hover {
+        background: #333;
+      }
+      
+      #progress {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      color: #aaa;
+        font-size: 14px;
+      font-family: monospace;
+      }
+
+@media (max-width: 800px) {
+  body { align-items: flex-start; overflow-y: auto; }
+  .content { flex-direction: column; }
+  .content img, .text { width: 100%; }
+}
+</style>
+  </head>
+  
+  <body>
+  
+  <div id="progress"></div>
+    
+    <!-- ======= SLIDES ======= -->
+      
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <div class="content" style="flex-direction: row;">
+          <img src="https://source.unsplash.com/featured/?linux,open-source" alt="Linux concept">
+            <div class="text">
+              <h1>Taking Back Control: Why Linux is the Future</h1>
+              <h3>From Corporate Surveillance to Personal Sovereignty</h3>
+              <p><strong>Presenter:</strong> [Your Name]</p>
+              <p><em>"Your computer should serve you, not spy on you"</em></p>
+              </div>
+              </div>
+              </div>
+              
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="content" style="flex-direction: row-reverse;">
+                  <img src="https://source.unsplash.com/featured/?windows,update,reboot" alt="Windows update frustration">
+                    <div class="text">
+                      <h2>The Windows Problem - A Personal Story</h2>
+                      <ul>
+                      <li>Early morning forced reboots</li>
+                      <li>Lost work, closed applications</li>
+                      <li>No explanation, no transparency</li>
+                      <li>"Who really controls my machine?"</li>
+                      </ul>
+                      </div>
+                      </div>
+                      </div>
+                      
+                      <!-- Slide 3 -->
+                      <div class="slide">
+                        <div class="content" style="flex-direction: row;">
+                          <img src="https://source.unsplash.com/featured/?surveillance,monitoring,data" alt="Data collection">
+                            <div class="text">
+                              <h2>What Windows Actually Is (2025 Edition)</h2>
+                              <ul>
+                              <li>Windows as a Service - not software you own</li>
+                              <li>Mandatory telemetry</li>
+                              <li>Forced updates</li>
+                              <li><strong>You're not the administrator - Microsoft is</strong></li>
+            </ul>
+            <p><em>"Updates will be automatically downloaded and installed"</em></p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4 -->
+<div class="slide">
+    <div class="content" style="flex-direction: row-reverse;">
+        <img src="https://source.unsplash.com/featured/?mystery,locked,unknown" alt="Opaque systems">
+        <div class="text">
+            <h2>The Opaque Update System</h2>
+            <h3>What we know:</h3>
+            <ul>
+                <li>Restarts without warning</li>
+                <li>No detailed changelogs</li>
+                <li>Can't postpone indefinitely</li>
+                              </ul>
+                              <h3>What we don't know:</h3>
+            <ul>
+                <li>What changed</li>
+                <li>What data is collected</li>
+                <li>What "security improvements" mean</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5 -->
+<div class="slide">
+    <div class="content" style="flex-direction: row;">
+        <img src="https://source.unsplash.com/featured/?security,hacker,computer" alt="Security paradox">
+        <div class="text">
+            <h2>The Security Paradox</h2>
+            <ul>
+                <li>"We restart for your security"</li>
+                <li>Forced restarts cause data loss</li>
+                <li>True security = transparency + control</li>
+                <li>Windows: opaque SYSTEM processes</li>
+            </ul>
+            <p><strong>If it looks like malware...</strong></p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6 -->
+<div class="slide">
+    <div class="content" style="flex-direction: row-reverse;">
+        <img src="https://source.unsplash.com/featured/?prism,nsa,surveillance" alt="PRISM surveillance">
+        <div class="text">
+            <h2>Historical Context - PRISM & Beyond</h2>
+            <ul>
+                <li>2013 PRISM: Microsoft first to join</li>
+                <li>Direct access to servers</li>
+                <li>2025: mandatory MS account</li>
+                <li>Cloud-first, telemetry</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7 -->
+<div class="slide">
+    <div class="content" style="flex-direction: row;">
+        <img src="https://source.unsplash.com/featured/?business,data,cloud" alt="Business model shift">
+        <div class="text">
+            <h2>The Business Model Shift</h2>
+            <ul>
+                <li>Old: sell software</li>
+                <li>New: collect data</li>
+                <li>Pushes OneDrive, 365, Edge</li>
+                <li>Telemetry can't be fully disabled</li>
+                              </ul>
+                              </div>
+                              </div>
+                              </div>
+                              
+                              <!-- Slide 8 -->
+                              <div class="slide">
+                                <div class="content" style="flex-direction: row-reverse;">
+                                  <img src="https://source.unsplash.com/featured/?freedom,philosophy,open-source" alt="Linux philosophy">
+                                    <div class="text">
+                                      <h2>Enter Linux - Philosophy First</h2>
+                                      <p>Core principle: <strong>User sovereignty</strong></p>
+                                      <ul>
+                                      <li>Freedom to run</li>
+                                      <li>Freedom to study</li>
+                                      <li>Freedom to share</li>
+                                      <li>Freedom to modify</li>
+                                      </ul>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      
+                                      <!-- Slide 9 -->
+                                      <div class="slide">
+                                        <div class="content" style="flex-direction: row;">
+                                          <img src="https://source.unsplash.com/featured/?terminal,code,logs" alt="Linux transparency">
+                                            <div class="text">
+                                              <h2>Linux Transparency</h2>
+                                              <ul>
+                                              <li>Open source</li>
+                                              <li>Accessible logs</li>
+                                              <li>User-controlled updates</li>
+                                              <li>No telemetry by default</li>
+                                              </ul>
+                                              </div>
+                                              </div>
+                                              </div>
+                                              
+                                              <!-- Slide 10 -->
+                                              <div class="slide">
+                                                <div class="content" style="flex-direction: row-reverse;">
+                                                  <img src="https://source.unsplash.com/featured/?balance,control" alt="Control spectrum">
+                                                    <div class="text">
+                                                      <h2>The Control Spectrum</h2>
+                                                      <pre>
+                                                      Windows 11     vs     Linux
+                                                    -----------------------------------------
+                                                      Forced Updates     →  Updates You Choose
+                                                    Opaque Processes   →  Visible Everything
+                                                    Telemetry Default  →  No Telemetry
+                                                    Corp Control       →  User Control
+                                                    Restarts You       →  You Restart It
+                                                    </pre>
+                                                      </div>
+                                                      </div>
+                                                      </div>
+                                                      
+                                                      <!-- Slide 11 -->
+                                                      <div class="slide">
+                                                      <div class="content" style="flex-direction: row;">
+                                                      <img src="https://source.unsplash.com/featured/?laptop,linux,productivity" alt="Benefits of Linux">
+                                                      <div class="text">
+                                                      <h2>Practical Benefits Today</h2>
+                                                      <ul>
+                                                      <li>No forced reboots</li>
+                                                      <li>Lightweight, fast</li>
+                                                      <li>Free</li>
+                                                      <li>Customizable</li>
+                                                      <li>Secure</li>
+                                                      <li>Private</li>
+                                                      </ul>
+                                                      </div>
+                                                      </div>
+                                                      </div>
+                                                      
+                                                      <!-- Slide 12 -->
+                                                      <div class="slide">
+                                                      <div class="content" style="flex-direction: row-reverse;">
+                                                      <img src="https://source.unsplash.com/featured/?myth,debunk" alt="Myths debunked">
+                                                      <div class="text">
+                                                      <h2>Common Myths Debunked</h2>
+                                                      <ul>
+                                                      <li>“Too hard” → Mint/Zorin are easier</li>
+                                                      <li>“No software” → 60k+ apps</li>
+                                                      <li>“No games” → Proton</li>
+                                                      <li>“No support” → huge community</li>
+                                                      <li>“For geeks” → grandma uses Mint</li>
+                                                      </ul>
+                                                      </div>
+                                                      </div>
+                                                      </div>
+                                                      
+                                                      <!-- Slide 13 -->
+                                                      <div class="slide">
+                                                      <div class="content" style="flex-direction: row;">
+                                                      <img src="https://source.unsplash.com/featured/?usb,installation,setup" alt="Switching to Linux">
+                                                      <div class="text">
+                                                      <h2>The Switch is Easier Than Ever</h2>
+                                                      <ul>
+                                                      <li>USB test drive</li>
+                                                      <li>Dual boot</li>
+                                                      <li>Full switch when ready</li>
+                                                      <li>Mint / Ubuntu / Pop!_OS</li>
+                                                      </ul>
+                                                      </div>
+                                                      </div>
+                                                      </div>
+                                                      
+                                                      <!-- Slide 14 -->
+                                                      <div class="slide">
+                                                      <div class="content" style="flex-direction: row-reverse;">
+                                                      <img src="https://source.unsplash.com/featured/?learning,community,tech" alt="What you gain">
+                                                      <div class="text">
+                                                      <h2>What You Gain</h2>
+                                                      <ul>
+                                                      <li>Understanding computers</li>
+                                                      <li>Community support</li>
+                                                      <li>Future-proof skills</li>
+                                                      <li>Ethical software use</li>
+                                                      <li>Lower stress</li>
+                                                      </ul>
+                                                      </div>
+                                                      </div>
+                                                      </div>
+                                                      
+                                                      <!-- Slide 15 -->
+                                                      <div class="slide">
+                                                      <div class="content" style="flex-direction: row;">
+                                                      <img src="https://source.unsplash.com/featured/?privacy,autonomy,technology" alt="Bigger picture">
+                                                      <div class="text">
+                                                      <h2>The Bigger Picture</h2>
+                                                      <ul>
+                                                      <li>Digital autonomy</li>
+                                                      <li>Right to repair</li>
+                                                      <li>Local-first computing</li>
+                                                      <li>Transparent tech</li>
+                                                      </ul>
+                                                      <em>"The most secure computer is the one you control completely."</em>
+                                                      </div>
+                                                      </div>
+                                                      </div>
+                                                      
+                                                      <!-- Slide 16 -->
+                                                      <div class="slide">
+                                                      <div class="content" style="flex-direction: row-reverse;">
+                                                      <img src="https://source.unsplash.com/featured/?linux,mint,iso" alt="First steps">
+                                                      <div class="text">
+                                                      <h2>First Steps - Right Now</h2>
+                                                      <ul>
+                                                      <li>Download Linux Mint ISO</li>
+                                                      <li>Create persistent USB</li>
+                                                      <li>Boot risk-free</li>
+                                                      <li>Use for a week</li>
+                                                      </ul>
+                                                      </div>
+                                                      </div>
+                                                      </div>
+                                                      
+                                                      <!-- Slide 17 -->
+                                                      <div class="slide">
+                                                      <div class="content" style="flex-direction: row;">
+                                                      <img src="https://source.unsplash.com/featured/?support,help,community" alt="Resources">
+                                                      <div class="text">
+                                                      <h2>Resources & Getting Help</h2>
+                                                      <ul>
+                                                      <li>Mint, Zorin, Pop!_OS</li>
+                                                      <li>Reddit r/linux4noobs</li>
+                                                      <li>Ubuntu Forums</li>
+                                                      <li>Linux Journey</li>
+                                                      </ul>
+                                                      </div>
+                                                      </div>
+                                                      </div>
+                                                      
+                                                      <!-- Slide 19 -->
+                                                      <div class="slide">
+                                                      <div class="content" style="flex-direction: row-reverse;">
+                                                      <img src="https://source.unsplash.com/featured/?tools,control,technology" alt="Final thought">
+                                                      <div class="text">
+                                                      <pre>
+                                                      "We used to own our tools.
+We used to understand our tools.
+We used to control our tools.
+With Linux, we still can."
+                                                    </pre>
+                                                      </div>
+                                                      </div>
+                                                      </div>
+                                                      
+                                                      <!-- ======= NAV ======= -->
+                                                      
+                                                      <div class="nav">
+                                                      <button onclick="prevSlide()">◀ Previous</button>
+                                                      <button onclick="nextSlide()">Next ▶</button>
+                                                      </div>
+                                                      
+                                                      <script>
+                                                      let current = 0;
+                                                    const slides = document.querySelectorAll('.slide');
+                                                    const progress = document.getElementById("progress");
+                                                    
+                                                    function update() {
+                                                      slides.forEach(s => s.classList.remove('active'));
+                                                      slides[current].classList.add('active');
+                                                      progress.textContent = "Slide " + (current + 1) + " / " + slides.length;
+                                                    }
+                                                    
+                                                    function nextSlide() {
+                                                      if (current < slides.length - 1) {
+                                                        current++;
+                                                        update();
+                                                      }
+                                                    }
+                                                    
+                                                    function prevSlide() {
+                                                      if (current > 0) {
+                                                        current--;
+                                                        update();
+                                                      }
+                                                    }
+                                                    
+                                                    document.addEventListener("keydown", e => {
+                                                      if (e.key === "ArrowRight") nextSlide();
+                                                      if (e.key === "ArrowLeft") prevSlide();
+                                                    });
+                                                    
+                                                    update();
+                                                    </script>
+                                                      
+                                                      </body>
+                                                      </html>
+                                                      
